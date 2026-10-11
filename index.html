@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">SR</div>
+            <h1>Student Registration</h1>
+            <p>Create your student registration profile</p>
+        </header>
+
+        <div id="successMessage" class="success" role="status" hidden>
+            Registration successful! Your information has been validated.
+        </div>
+
+        <form id="registrationForm" novalidate>
+            <h2>Personal Information</h2>
+
+            <div class="form-grid">
+                <div class="field">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" data-label="Student ID"
+                           placeholder="e.g. 2026-0001" data-required="true">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="field">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" data-label="Full Name"
+                           placeholder="Enter your full name" data-required="true">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" data-label="Email"
+                           placeholder="you@example.com" data-required="true">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" data-label="Phone Number"
+                           placeholder="09XXXXXXXXX" data-required="true">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="field">
+                    <label for="birthDate">Date of Birth</label>
+                    <input type="date" id="birthDate" data-label="Date of Birth"
+                           data-required="true">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="field">
+                    <label for="gender">Gender</label>
+                    <select id="gender" data-label="Gender" data-required="true">
+                        <option value="">Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                    </select>
+                    <small class="error-message"></small>
+                </div>
+            </div>
+
+            <h2>Academic Information</h2>
+
+            <div class="form-grid">
+                <div class="field">
+                    <label for="program">Program</label>
+                    <select id="program" data-label="Program" data-required="true">
+                        <option value="">Select program</option>
+                        <option value="BSIT">BS Information Technology</option>
+                        <option value="BSCS">BS Computer Science</option>
+                        <option value="BSBA">BS Business Administration</option>
+                        <option value="BSED">Bachelor of Secondary Education</option>
+                        <option value="BEED">Bachelor of Elementary Education</option>
+                    </select>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="field">
+                    <label for="yearLevel">Year Level</label>
+                    <select id="yearLevel" data-label="Year Level" data-required="true">
+                        <option value="">Select year level</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                    <small class="error-message"></small>
+                </div>
+            </div>
+
+            <h2>Account Information</h2>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <div class="password-box">
+                    <input type="password" id="password" data-label="Password"
+                           placeholder="At least 8 characters" data-required="true">
+                    <button type="button" class="show-password"
+                            data-target="password" aria-pressed="false"
+                            aria-label="Show password">Show</button>
+                </div>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="field">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="password-box">
+                    <input type="password" id="confirmPassword"
+                           data-label="Confirm Password"
+                           placeholder="Re-enter your password" data-required="true">
+                    <button type="button" class="show-password"
+                            data-target="confirmPassword" aria-pressed="false"
+                            aria-label="Show confirm password">Show</button>
+                </div>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="field">
+                <label for="address">Address</label>
+                <textarea id="address" data-label="Address" data-required="true"
+                          rows="3" placeholder="Enter your complete address"></textarea>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="agreement">
+                <input type="checkbox" id="agreement">
+                <label for="agreement">
+                    I confirm that the information provided is correct.
+                </label>
+            </div>
+            <small id="agreementError" class="error-message"></small>
+
+            <div class="buttons">
+                <button type="submit" class="submit-btn">Register Now</button>
+                <button type="reset" class="reset-btn">Reset Form</button>
+            </div>
+        </form>
+
+        <footer>Student Registration System &copy; 2026</footer>
+    </div>
+</body>
+</html>
